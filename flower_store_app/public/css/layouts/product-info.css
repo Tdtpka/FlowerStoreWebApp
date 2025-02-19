@@ -1,0 +1,101 @@
+.container{
+    height: 600px;
+    width: 1200px;
+    justify-self: center;
+    margin-top: 50px;
+    display: flex;
+}
+.image{
+    width: 400px;
+    background-color: wheat;
+    height: 600px;
+}
+.info{
+    width: 800px;
+    background-color: aqua;
+}
+.name{
+    margin: 35px 50px 20px 50px;
+    height: 40px;
+    background-color: aquamarine;
+    font-size: 35px;
+    font-weight: bold;
+}
+.price{
+    margin: 20px 50px;
+    height: 30px;
+    background-color: aliceblue;
+    display: flex;
+    gap: 30px;
+}
+.new-price{
+    font-size: 25px;
+    font-weight: bold;
+}
+.old-price{
+    font-size: 20px;
+    text-decoration: line-through;
+    margin-top: 3px;
+}
+.change-number{
+    margin-left: 50px;
+    background-color: gray;
+    height: 40px;
+    display: flex;
+    gap: 20px;
+}
+#lower{
+    background-color: white;
+    width: 40px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 0.8;
+}
+#quantity{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+#upper{
+    background-color: white;
+    width: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+}
+.add-to-cart{
+    width: 150px;
+    height: 35px;
+    justify-self: center;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: blueviolet;
+    margin-top: -45px;
+    padding-top: 15px;
+}
+.promotion{
+    margin: 30px 50px;
+    background-color: bisque;
+    height: 340px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.description{
+    width: 1200px;
+    justify-self: center;
+    background-color: rgb(79, 212, 212);
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.content{
+    font-size: 30px;
+    font-weight: bold;
+}
+.text{
+    font-size: 20px;
+    line-height: 1.8;
+    padding: 0px 50px;
+}

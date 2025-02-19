@@ -1,0 +1,30 @@
+.footer{
+    height: 200px;
+    display: flex;
+    background-image: url('/images/footer_img.jpg'); /* Đường dẫn tới hình ảnh */
+    background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ phần tử */
+    background-position: center;
+    color: lightgray;
+    margin-top: 50px;
+}
+.information{
+    width: 1000px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.information>ul{
+    list-style: none;
+    margin-top: 25px;
+}
+.information>ul>li{
+    margin-top: 10px;
+}
+.contact{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.contact>ul>li{
+    list-style: none;
+    margin-top: 25px;
+    font-size: 18px;
+}

@@ -1,0 +1,6 @@
+.products{
+    padding: 0px 130px 0px 180px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột trên một hàng */
+    gap: 10px;
+}
