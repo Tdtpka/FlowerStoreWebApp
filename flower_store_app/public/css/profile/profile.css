@@ -1,0 +1,61 @@
+.profile{
+    background-color: aliceblue;
+    width: 90%;
+    justify-self: center;
+}
+.main{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-self: center;
+}
+.form{
+    width: 100%;
+    background-color: aliceblue;
+}
+.title{
+    font-size: 25px;
+    margin: 20px;
+    font-weight: bold;
+}
+.label{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.row{
+    margin-top: 10px;
+}
+.field{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 16px;
+}
+.button{
+    margin-left: 40%;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.logout-btn{
+    margin: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: pink;
+}
+
+@media screen and (max-width:1200px) {
+    .main{
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+
+@media screen and (max-width:1000px) {
+    .main{
+        grid-template-columns: 1fr;
+    }
+    
+}

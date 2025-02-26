@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('content')
-    @include('layouts.topic')
-    @include('layouts.topic')
+    <div class="main">
+        @foreach ($blogs as $data)
+            @include('layouts.topic', [$data])
+        @endforeach
+    </div>
 @endsection

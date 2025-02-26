@@ -1,7 +1,14 @@
 .content{
     display: flex;
+    width: 100%;
     justify-self: center;
     gap: 20px;
+}
+.label_cart{
+    margin-left: 5%;
+}
+.items{
+    width: 70%;
 }
 .checkout-info{
     width: 250px;
@@ -27,4 +34,40 @@
     margin-top: 30px;
     justify-self: center;
     border-radius: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .items{
+        width: 65%;
+    }
+}
+@media screen and (max-width:1000px) {
+    .items{
+        width: 60%;
+    }
+}
+@media screen and (max-width:900px) {
+    .content{
+        display: block;
+    }
+    .items{
+        width: 100%;
+    }
+    .checkout-info{
+        justify-self: center;
+        width: 50%;
+        height: 230px;
+        padding: 20px 20px 0px 20px;
+    }
+    .row{
+        font-size: 18px;
+    }
+    #checkout-btn{
+        font-size: 18px;
+        width: 90px;
+        height: 30px;
+        padding-top: 5px;
+        margin-top: 20px;
+    }
+    
 }

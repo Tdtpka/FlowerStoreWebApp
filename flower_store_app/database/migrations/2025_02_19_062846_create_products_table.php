@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedInteger('newprice');
             $table->unsignedInteger('oldprice');
             $table->string('image');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }

@@ -1,26 +1,37 @@
 @extends('layouts.app')
 @section('content')
-<link rel="stylesheet" href="css/layouts/product-info.css">
+<link rel="stylesheet" href="{{  asset('css/layouts/product-info.css')}}">
+<script src="{{ asset('js/quantity.js') }}"></script>
 <div class="container">
-        <div class="image"></div>
+    <div class="main">
+        <div class="image">
+            <img class="product_img" src="{{asset("images/product_images/$product->image")}}" alt="">
+        </div>
         <div class="info">
-            <div class="name">ABCDEF</div>
+            <div class="name">{{$product->name}}</div>
             <div class="price">
-                <div class="new-price">900.000</div>
-                <div class="old-price">1.500.000</div>
+                <div class="new-price">{{$product->newprice}}</div>
+                <div class="old-price">{{$product->oldprice}}</div>
             </div>
-            <div class="change-number">
-                <div id="lower">-</div>
-                <div id="quantity">0</div>
-                <div id="upper">+</div>
+            <div class="change-quantity">
+                <button onclick="changeQuantity(this, -1)" id="minus">-</button>
+                <input type="text" class="label_quantity" value="1" min="1">
+                <button onclick="changeQuantity(this, 1)" id="plus">+</button>
             </div>
-            <div class="add-to-cart">THÊM VÀO GIỎ</div>
+            <div class="add-to-cart">
+                <form action="{{ route('cart.add') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="productid" value="{{ $product->productid }}">
+                    <input type="hidden" name="quantity" id='quantity' value="1">
+                    <button type="submit" class="btn-add">THÊM VÀO GIỎ</button>
+                </form>
+            </div>
             <div class="promotion">Tang thiep tri gia 20.000d khi dat tu 2 bo<br>Tang thiep tri gia 20.000d khi dat tu 2 bo<br>Tang thiep tri gia 20.000d khi dat tu 2 bo</div>
         </div>
     </div>
     <div class="description">
         <div class="content">MO TA</div>
-        <div class="text">Bó hoa hồng được kết tinh từ những đóa hoa rực rỡ, mềm mại với những cánh hoa bung nở tuyệt đẹp. Mỗi bông hoa khoe sắc như một lời thì thầm của tình yêu và sự trân trọng. Màu hồng dịu dàng mang đến cảm giác ấm áp, màu đỏ tượng trưng cho sự nồng cháy, trong khi sắc trắng lại gợi lên nét thuần khiết và tinh khôi. Được điểm xuyết thêm lá xanh tươi mát và một chút hoa baby nhỏ nhắn, bó hoa trở nên càng thêm lộng lẫy và cuốn hút. Lớp giấy gói sang trọng kết hợp với chiếc ruy băng thanh lịch tạo nên một tổng thể hoàn hảo – vừa hiện đại vừa đầy cảm xúc.
-</div>
+        <div class="text">{{$product->description}}</div>
     </div>
+</div>
 @endsection

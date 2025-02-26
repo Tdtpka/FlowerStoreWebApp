@@ -1,38 +1,46 @@
 @extends('layouts.app')
 @section('content')
     <link rel="stylesheet" href="css/store/cart.css">
-    <h2>Gio hang</h2>
-    <div class="content">
+    <script src="js/quantity.js"></script>
+    <script>
+        window.onload = function(){
+            getCheckoutInfo();
+        };
+    </script>
+    <h2 class="label_cart">Giỏ hàng</h2>
+    <div class="content" >
         <div class="items">
-            @include('layouts.cart-item')
-            @include('layouts.cart-item')
-            @include('layouts.cart-item')
-            @include('layouts.cart-item')
-            @include('layouts.cart-item')
+            @if ($cart)
+                @foreach ($cart as $cartItem)
+                    @include('layouts.cart-item', compact('cartItem'))
+                @endforeach
+            @endif
         </div>
         <div class="checkout-info">
             <div class="row">
-                <span>Tam tinh</span>
-                <strong id="sub-total">50.000d</strong>
+                <span>Tạm tính</span>
+                <strong id="sub-total"></strong>
             </div>
             <div class="row">
-                <span>Phu phi</span>
-                <strong id="sub-fee">50.000d</strong>
+                <span>Phụ phí</span>
+                <strong id="sub-fee"></strong>
             </div>
             <div class="row">
-                <span>Giam gia</span>
-                <strong id="discount">50.000d</strong>
+                <span>Giảm giá</span>
+                <strong id="discount"></strong>
             </div>
             <div class="row">
-                <span>Hoa don VAT</span>
-                <strong id="vat">50.000d</strong>
+                <span>Hóa đơn VAT</span>
+                <strong id="vat"></strong>
             </div>
             <hr>
             <div class="row">
-                <span>Tong cong</span>
-                <strong id="total">50.000d</strong>
+                <span>Tổng cộng</span>
+                <strong id="total"></strong>
             </div>
-            <div id="checkout-btn">Thanh toan</div>
+            <div id="checkout-btn">
+                <a href="{{ route('checkout') }}">Đặt hàng</a>
+            </div>
         </div>
     </div>
 @endsection

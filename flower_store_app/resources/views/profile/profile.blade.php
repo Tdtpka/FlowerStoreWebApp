@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    @include('layouts.header')
-    @include('layouts.footer')
-</body>
-</html>
+<div class="profile">
+    <div class="title">Tài khoản</div>
+    <div class="userName">
+        <div class="label">Ten tai khoan:
+        {{ Auth::user()->name }}</div>
+    </div>
+    <div class="userEmail">
+        <div class="label">Email:
+        {{ Auth::user()->email }}</div>
+    </div>
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <a href="{{ route('logout')}}" onclick="event.preventDefault();
+                                this.closest('form').submit();" class="button">
+            Đăng xuất
+        </a>
+    </form>
+</div>

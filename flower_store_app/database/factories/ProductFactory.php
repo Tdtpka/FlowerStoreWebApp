@@ -19,12 +19,11 @@ class ProductFactory extends Factory
         return [
             //
             'name' => fake() ->name(),
-            'productid' => fake() ->unique() -> numberBetween(0, 200),
+            'productid' => fake() ->unique() -> numberBetween(0, 10),
             'image' => fake() ->imageUrl(),
             'oldprice' => fake() ->numberBetween(1000000, 3000000),
             'newprice' => fake() ->numberBetween(500000, 1000000),
             'description' => fake() -> paragraph(),
-
         ];
     }
 }

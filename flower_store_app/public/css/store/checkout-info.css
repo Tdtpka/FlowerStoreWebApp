@@ -1,0 +1,57 @@
+.main{
+    width: 20%;
+    justify-self: center;
+}
+.row{
+    width: 100%;
+    margin: 10px;
+}
+label{
+    font-size: 20px;
+}
+input{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.row{
+    justify-self: center;
+}
+@media screen and (max-width:1200px) {
+    .main{
+        width: 30%;
+    }
+}
+@media screen and (max-width:900px) {
+    .main{
+        width: 35%;
+    }
+}
+@media screen and (max-width:700px) {
+    .main{
+        width: 45%;
+    }
+}
+@media screen and (max-width:600px) {
+    .main{
+        width: 55%;
+    }
+}
+@media screen and (max-width:500px) {
+    .main{
+        width: 65%;
+    }
+    input{
+        width: 260px;
+    }
+}
+@media screen and (max-width:400px) {
+    .main{
+        width: 80%;
+    }
+}
+
+
+
+
