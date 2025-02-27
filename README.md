@@ -2,6 +2,11 @@
 Website quản lý cửa hàng bán hoa online
 
 Repo git: https://github.com/Tdtpka/FlowerStoreWebApp.git
+# Công nghệ sử dụng
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP, Laravel Framework
+- Database: MySQL, Aiven
+- Authentication: Laravel Breeze
 # Chức năng
 Khách hàng:
 - Đăng nhập, đăng ký tài khoản
